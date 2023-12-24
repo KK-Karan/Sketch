@@ -3,6 +3,25 @@ grid.className = "grid";
 let enter = document.getElementById('enter')
 
 
+function createDefaultGrid() {
+  grid.innerHTML = '';
+  let defaultValue = 4;
+  for (let i = 0; i < defaultValue; i++) {
+    let column = document.createElement("div");
+    column.className = "column";
+
+    for (let j = 0; j < defaultValue; j++) {
+      let row = document.createElement("div");
+      row.className = "row";
+      row.style.width = 400 / defaultValue + "px";
+      row.style.height = 400 / defaultValue + "px";
+      column.appendChild(row);
+    }
+    grid.appendChild(column);
+  }
+}
+
+createDefaultGrid()
 
 
 grid.onmouseover = function(event) {
@@ -47,7 +66,6 @@ function toggleModal() {
 
 
 let input = document.getElementById("input");
-
 function getInputValue(){
   grid.innerHTML = '';
   newValue = input.value
