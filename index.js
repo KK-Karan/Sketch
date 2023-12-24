@@ -5,7 +5,7 @@ let enter = document.getElementById('enter')
 
 function createDefaultGrid() {
   grid.innerHTML = '';
-  let defaultValue = 4;
+  let defaultValue = 20;
   for (let i = 0; i < defaultValue; i++) {
     let column = document.createElement("div");
     column.className = "column";
