@@ -1,3 +1,17 @@
+body{
+    padding: 0;
+    margin:0;
+}
+
+.hovered{
+    background-color: black;
+}
+
+.removed{
+    background-color: "";
+}
+
+
 .header{
     display: flex;
     font-size: 3.5rem;
@@ -9,35 +23,42 @@
 .grid{
     display: flex;
     justify-content: center;
-    max-width: 40rem;
+    max-width: 400px;
     margin: 0 auto;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    max-height: 40rem;
-
+    max-height: 400px;
 }
 
 .column{
     flex:1;
     flex-grow: 0;
-    
-    
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 16px;
+    gap:32px;
+}
+
+.row{
+    flex-grow: 0;
 }
 
 
 
 
 
-.row{
-    width: 640px;
-    height:640px;
-    padding:0; 
-    
+.username{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center; 
 }
 
 .clear__button{
-    margin-left: 32.4rem;
-    margin-bottom: 1rem;
     width: 4rem;
     height: 2rem;
     outline: none;
@@ -81,8 +102,6 @@
 .trigger{
   background-color: rgb(10, 14, 14);
 
-  margin-left: 1rem;
-  margin-bottom: 1rem;
   width: 4rem;
   height: 2rem;
 text-align: center;
@@ -134,3 +153,12 @@ visibility: visible;
 transform: scale(1.0);
 transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
+
+/* 
+
+@media(max-width:708px){
+    .grid{
+        max-width: 400px;
+        max-height: 400px;
+    }
+} */
